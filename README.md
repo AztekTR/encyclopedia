@@ -1,5 +1,16 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
+**Technologies used:**
+1.  **`react`** Library that makes developing UI easier.
+
+2.  **`react-router`** Small library that helps creating routing for SPA based on React.
+
+3.  **`react-redux`** Library that allows React components read data from a Redux store, and dispatch actions to the store to update global state.
+
+4.  **`react-modal`** Allows to build modal windows for react apllications very fast.
+
+5.  **`SCSS`** Preprocessor that gives us more readable CSS and some cool features.
+
 ## Available Scripts
 
 In the project directory, you can run:
