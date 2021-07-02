@@ -1,0 +1,29 @@
+.article-section__body{
+    width: 60vw;
+    margin: 0 auto;
+
+    .article-section__image{
+        float: left;
+        width: 300px;
+        height: 400px;
+        margin: 0 1rem 0 0;
+        border-radius: 6px;
+    }
+
+    .article-section__text{
+        text-align: justify;
+        text-indent: 2rem;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .article-section__body{
+        width: 80vw;
+        
+        .article-section__image{
+            width: 100%;
+            height: 250px;
+            margin-bottom: 1rem;
+        }
+    }
+}

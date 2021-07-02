@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
+
+details > summary {
+    list-style: none;
+}
+details > summary::marker {
+    display: none;
+}
+
+.categories-section__body{
+    width: 60vw;
+    margin: 0 auto;
+    font-family: 'Castoro', serif;
+
+    .categories-section__category-name{
+        font-size: 1.75rem;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .categories-section__category-name:hover{
+        text-decoration: underline;
+        color:rgb(80, 70, 70)
+    }
+
+    .categories-section__inside-list{
+        list-style-type: decimal;
+    }
+
+    .categories-section__article-name{
+        font-size: 1.375rem;
+    }
+}
