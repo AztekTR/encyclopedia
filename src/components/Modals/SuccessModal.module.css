@@ -1,0 +1,20 @@
+.button{
+    padding: 0.5rem 2rem;
+    border-radius: 20px;
+    border: none;
+    background-color: rgb(60,183,120);
+    font-size: 1.1rem;
+    color: white;
+}
+
+.button::before{
+    display: inline-block;
+    content: 'x\00a0';
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: white;
+}
+
+.header{
+    color: rgb(41, 160, 98);
+}

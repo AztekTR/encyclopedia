@@ -6,6 +6,8 @@ import {
   chooseCategory,
   incrementArticleCounter,
 } from "./articlesSlice";
+import { ErrorModal } from './Modals/ErrorModal'
+import { SuccessModal } from './Modals/SuccessModal'
 import "./assets/css/AddArticle.scss";
 
 export function AddArticle() {
@@ -20,6 +22,18 @@ export function AddArticle() {
     img: articleImage,
     text: articleText,
   });
+
+  const [errorModalIsOpen, setErrorModalIsOpen] = React.useState(0);
+  const [errorModalMessage, setErrorModalMessage] = React.useState('');
+  const [successModalIsOpen, setSuccessModalIsOpen] = React.useState(0);
+
+  function changeErrorModal() {
+    setErrorModalIsOpen(errorModalIsOpen + 1);
+  }
+
+  function changeSuccessModal() {
+    setSuccessModalIsOpen(successModalIsOpen + 1);
+  }
 
   const dispatchNewArticle = () => {
     setArticleContent(
@@ -36,13 +50,17 @@ export function AddArticle() {
 
   const formValidator = () => {
     if (!(articleHeader && articleImage && articleText)) {
-      alert("All fields must be filled!");
+      setErrorModalMessage("All fields must be filled!");
+      changeErrorModal();
     } else if (articleHeader.length > 50) {
-      alert("Article header longer then 50 symbols.");
+      setErrorModalMessage("Article header longer then 50 symbols.");
+      changeErrorModal();
     } else if (!imageFormatRE.test(articleImage)) {
-      alert("Invalid image URL.");
+      setErrorModalMessage("Invalid image URL.");
+      changeErrorModal();
     } else {
       dispatchNewArticle();
+      changeSuccessModal();
     }
   };
 
@@ -109,6 +127,9 @@ export function AddArticle() {
       >
         Add
       </button>
+
+      <ErrorModal isOpen={errorModalIsOpen} message={errorModalMessage} />
+      <SuccessModal isOpen={successModalIsOpen} />
     </div>
   );
 }
