@@ -27,11 +27,11 @@ export function AddArticle() {
   const [errorModalMessage, setErrorModalMessage] = React.useState('');
   const [successModalIsOpen, setSuccessModalIsOpen] = React.useState(0);
 
-  function changeErrorModal() {
+  function callErrorModal() {
     setErrorModalIsOpen(errorModalIsOpen + 1);
   }
 
-  function changeSuccessModal() {
+  function callSuccessModal() {
     setSuccessModalIsOpen(successModalIsOpen + 1);
   }
 
@@ -48,19 +48,19 @@ export function AddArticle() {
     dispatch(addContentArticle(articleContent));
   };
 
-  const formValidator = () => {
+  const addButtonHandler = (event) => {
     if (!(articleHeader && articleImage && articleText)) {
       setErrorModalMessage("All fields must be filled!");
-      changeErrorModal();
+      callErrorModal();
     } else if (articleHeader.length > 50) {
       setErrorModalMessage("Article header longer then 50 symbols.");
-      changeErrorModal();
+      callErrorModal();
     } else if (!imageFormatRE.test(articleImage)) {
       setErrorModalMessage("Invalid image URL.");
-      changeErrorModal();
+      callErrorModal();
     } else {
       dispatchNewArticle();
-      changeSuccessModal();
+      callSuccessModal();
     }
   };
 
@@ -123,7 +123,7 @@ export function AddArticle() {
 
       <button
         className="add-article-section__add-button"
-        onClick={formValidator}
+        onClick={addButtonHandler}
       >
         Add
       </button>
