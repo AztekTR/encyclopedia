@@ -7,13 +7,16 @@ import "./assets/css/Header.scss";
 function Header() {
   return (
     <header className="header">
-      <Link to="/encyclopedia">
+      <Link to={`${process.env.PUBLIC_URL}/`}>
         <img src={logo} alt={"logo"} className="header__image"></img>
       </Link>
-      <Link to="/categories" className="header__link">
+      <Link
+        to={`${process.env.PUBLIC_URL}/categories`}
+        className="header__link"
+      >
         Categories
       </Link>
-      <Link to="/add" className="header__link">
+      <Link to={`${process.env.PUBLIC_URL}/add`} className="header__link">
         Add new article
       </Link>
     </header>

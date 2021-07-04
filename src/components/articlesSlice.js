@@ -3,7 +3,7 @@ import { Route, Link } from "react-router-dom";
 
 import { Article } from "./Article";
 import { Owl } from "./constantArticles/Owl";
-import { Alligator } from "./constantArticles/Alligator"
+import { Alligator } from "./constantArticles/Alligator";
 
 const initialState = {
   value: "",
@@ -14,12 +14,16 @@ const initialState = {
   },
   chosenCategory: "birds",
   contentArticles: [
-    <Route path={"/article_1"}>
+    <Route path={`${process.env.PUBLIC_URL}/article_1`}>
       <Article header={Owl().header} img={Owl().img} text={Owl().text} />,
     </Route>,
-    <Route path={"/article_2"}>
-      <Article header={Alligator().header} img={Alligator().img} text={Alligator().text} />
-    </Route>
+    <Route path={`${process.env.PUBLIC_URL}/article_2`}>
+      <Article
+        header={Alligator().header}
+        img={Alligator().img}
+        text={Alligator().text}
+      />
+    </Route>,
   ],
   articleCounter: 2,
   status: "idle",
@@ -35,13 +39,19 @@ export const articlesSlice = createSlice({
           className="categories-section__article-name"
           key={state.articleCounter}
         >
-          <Link to={`/article_${state.articleCounter}`}>{action.payload}</Link>
+          <Link
+            to={`${process.env.PUBLIC_URL}/article_${state.articleCounter}`}
+          >
+            {action.payload}
+          </Link>
         </li>
       );
     },
     addContentArticle: (state, action) => {
       state.contentArticles.push(
-        <Route path={`/article_${state.articleCounter}`}>
+        <Route
+          path={`${process.env.PUBLIC_URL}/article_${state.articleCounter}`}
+        >
           <Article
             header={action.payload["header"]}
             img={action.payload["img"]}

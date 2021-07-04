@@ -18,7 +18,7 @@ function Categories() {
             name={"Birds"}
             categoryMap={[
               <li key={1} className="categories-section__article-name">
-                <Link to="/article_1">Owl</Link>
+                <Link to={`${process.env.PUBLIC_URL}/article_1`}>Owl</Link>
               </li>,
             ].concat(categoriesMap["birds"])}
           />
@@ -26,7 +26,9 @@ function Categories() {
             name={"Reptiles"}
             categoryMap={[
               <li key={2} className="categories-section__article-name">
-                <Link to="/article_2">Alligator</Link>
+                <Link to={`${process.env.PUBLIC_URL}/article_2`}>
+                  Alligator
+                </Link>
               </li>,
             ].concat(categoriesMap["reptiles"])}
           />

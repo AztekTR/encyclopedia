@@ -6,7 +6,6 @@ import { contentArticles } from "./components/articlesSlice";
 import Categories from "./components/Categories";
 import { AddArticle } from "./components/AddArticle";
 import { Welcome } from "./components/Welcome";
-import { ErrorPage } from "./components/ErrorPage";
 import Header from "./components/Header";
 
 import "./App.scss";
@@ -19,18 +18,15 @@ function App() {
       <div className="App">
         <Header />
         <Switch>
-          <Route path={"/categories"}>
+          <Route path={`${process.env.PUBLIC_URL}/categories`}>
             <Categories />
           </Route>
-          <Route path={"/add"}>
+          <Route path={`${process.env.PUBLIC_URL}/add`}>
             <AddArticle />
           </Route>
-          <Route path={"/encyclopedia"}>
-            <Welcome />
-          </Route>
           {contentArticlesArray}
-          <Route path={"/"}>
-            <ErrorPage />
+          <Route path={`${process.env.PUBLIC_URL}/`}>
+            <Welcome />
           </Route>
         </Switch>
       </div>
