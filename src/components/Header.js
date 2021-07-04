@@ -7,7 +7,7 @@ import "./assets/css/Header.scss";
 function Header() {
   return (
     <header className="header">
-      <Link to="/">
+      <Link to="/encyclopedia">
         <img src={logo} alt={"logo"} className="header__image"></img>
       </Link>
       <Link to="/categories" className="header__link">

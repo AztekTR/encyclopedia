@@ -6,6 +6,7 @@ import { contentArticles } from "./components/articlesSlice";
 import Categories from "./components/Categories";
 import { AddArticle } from "./components/AddArticle";
 import { Welcome } from "./components/Welcome";
+import { ErrorPage } from "./components/ErrorPage";
 import Header from "./components/Header";
 
 import "./App.scss";
@@ -24,9 +25,12 @@ function App() {
           <Route path={"/add"}>
             <AddArticle />
           </Route>
+          <Route path={"/encyclopedia"}>
+            <Welcome />
+          </Route>
           {contentArticlesArray}
           <Route path={"/"}>
-            <Welcome />
+            <ErrorPage />
           </Route>
         </Switch>
       </div>
