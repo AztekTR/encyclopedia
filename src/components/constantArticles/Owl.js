@@ -1,8 +1,8 @@
-export function Owl() {
-  return {
-    header: "Owl",
-    img: `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Brazilian_burrowing_owl_%28Athene_cunicularia_grallaria%29.jpg/1200px-Brazilian_burrowing_owl_%28Athene_cunicularia_grallaria%29.jpg`,
-    text: `Owls are birds from the order Strigiformes /ˈstrɪdʒɪfɔːrmiːz/,
+export const Owl = {
+  id: '1',
+  header: "Owl",
+  img: `https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Brazilian_burrowing_owl_%28Athene_cunicularia_grallaria%29.jpg/1200px-Brazilian_burrowing_owl_%28Athene_cunicularia_grallaria%29.jpg`,
+  text: `Owls are birds from the order Strigiformes /ˈstrɪdʒɪfɔːrmiːz/,
     which includes over 200 species of mostly solitary and nocturnal birds
     of prey typified by an upright stance, a large, broad head, binocular
     vision, binaural hearing, sharp talons, and feathers adapted for silent flight.
@@ -21,5 +21,4 @@ export function Owl() {
     felt by owls with the use of filoplumes—hairlike feathers on the beak
     and feet that act as "feelers". Their far vision, particularly in low light,
     is exceptionally good.`,
-  };
-}
+};

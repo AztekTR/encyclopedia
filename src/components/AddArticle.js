@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import {
   addArticle,
-  addContentArticle,
   chooseCategory,
-  incrementArticleCounter,
 } from "./articlesSlice";
 import { ErrorModal } from './Modals/ErrorModal'
 import { SuccessModal } from './Modals/SuccessModal'
@@ -43,9 +41,7 @@ export function AddArticle() {
         text: articleText,
       })
     );
-    dispatch(incrementArticleCounter());
-    dispatch(addArticle(articleHeader));
-    dispatch(addContentArticle(articleContent));
+    dispatch(addArticle(articleContent));
   };
 
   const addButtonHandler = (event) => {

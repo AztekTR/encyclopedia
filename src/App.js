@@ -1,18 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { useSelector } from "react-redux";
-
-import { contentArticles } from "./components/articlesSlice";
 import Categories from "./components/Categories";
 import { AddArticle } from "./components/AddArticle";
 import { Welcome } from "./components/Welcome";
 import Header from "./components/Header";
 
 import "./App.scss";
+import { Article } from "./components/Article";
 
 function App() {
-  const contentArticlesArray = useSelector(contentArticles);
-
   return (
     <Router>
       <div className="App">
@@ -24,7 +20,9 @@ function App() {
           <Route path={`${process.env.PUBLIC_URL}/add`}>
             <AddArticle />
           </Route>
-          {contentArticlesArray}
+          <Route path={`${process.env.PUBLIC_URL}/:category/:id`}>
+            <Article />
+          </Route>
           <Route path={`${process.env.PUBLIC_URL}/`}>
             <Welcome />
           </Route>
