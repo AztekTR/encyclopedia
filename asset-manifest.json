@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/encyclopedia/static/css/main.b36324c1.chunk.css",
-    "main.js": "/encyclopedia/static/js/main.4db8614f.chunk.js",
-    "main.js.map": "/encyclopedia/static/js/main.4db8614f.chunk.js.map",
+    "main.css": "/encyclopedia/static/css/main.bc09a000.chunk.css",
+    "main.js": "/encyclopedia/static/js/main.cd54aa4c.chunk.js",
+    "main.js.map": "/encyclopedia/static/js/main.cd54aa4c.chunk.js.map",
     "runtime-main.js": "/encyclopedia/static/js/runtime-main.d78467da.js",
     "runtime-main.js.map": "/encyclopedia/static/js/runtime-main.d78467da.js.map",
-    "static/js/2.7e880039.chunk.js": "/encyclopedia/static/js/2.7e880039.chunk.js",
-    "static/js/2.7e880039.chunk.js.map": "/encyclopedia/static/js/2.7e880039.chunk.js.map",
+    "static/js/2.5b4f5564.chunk.js": "/encyclopedia/static/js/2.5b4f5564.chunk.js",
+    "static/js/2.5b4f5564.chunk.js.map": "/encyclopedia/static/js/2.5b4f5564.chunk.js.map",
     "index.html": "/encyclopedia/index.html",
-    "static/css/main.b36324c1.chunk.css.map": "/encyclopedia/static/css/main.b36324c1.chunk.css.map",
-    "static/js/2.7e880039.chunk.js.LICENSE.txt": "/encyclopedia/static/js/2.7e880039.chunk.js.LICENSE.txt"
+    "static/css/main.bc09a000.chunk.css.map": "/encyclopedia/static/css/main.bc09a000.chunk.css.map",
+    "static/js/2.5b4f5564.chunk.js.LICENSE.txt": "/encyclopedia/static/js/2.5b4f5564.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.d78467da.js",
-    "static/js/2.7e880039.chunk.js",
-    "static/css/main.b36324c1.chunk.css",
-    "static/js/main.4db8614f.chunk.js"
+    "static/js/2.5b4f5564.chunk.js",
+    "static/css/main.bc09a000.chunk.css",
+    "static/js/main.cd54aa4c.chunk.js"
   ]
 }
